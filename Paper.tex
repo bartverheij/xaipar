@@ -122,7 +122,7 @@ The accuracies of these systems on the specific test sets were almost identical,
     \centering
     \begin{subfigure}[t]{0.4\textwidth}
         \centering
-        \includegraphics[width = 1 \linewidth]{Figures/DTone.png}
+        \includegraphics[width = 1 \linewidth]{Figures/DTone.pdf}
         \caption{Decision tree accuracies}
         \label{fig:DTvsNN_DT}
     \end{subfigure}%
@@ -130,7 +130,7 @@ The accuracies of these systems on the specific test sets were almost identical,
     
     \begin{subfigure}[t]{0.4\textwidth}
         \centering
-        \includegraphics[width = 1 \linewidth]{Figures/NNone.png}
+        \includegraphics[width = 1 \linewidth]{Figures/NNone.pdf}
         \caption{Neural network accuracies}
         \label{fig:DTvsNN_NN}
     \end{subfigure}% 
@@ -145,21 +145,21 @@ Additionally, in order to investigate how well the systems perform with noise, a
     \centering
    \begin{subfigure}[t]{0.4\textwidth}
         \centering
-        \includegraphics[width = 1 \linewidth]{Figures/SBF_PU.png}
+        \includegraphics[width = 1 \linewidth]{Figures/SBF_PU.pdf}
         \caption{}
         \label{fig:SBF_PU}
     \end{subfigure}%
 
     \begin{subfigure}[t]{0.4\textwidth}
         \centering
-        \includegraphics[width = 1 \linewidth]{Figures/SBF_MU.png}
+        \includegraphics[width = 1 \linewidth]{Figures/SBF_MU.pdf}
         \caption{}
         \label{fig:SBF_MU}
     \end{subfigure}%
 
     \begin{subfigure}[t]{0.4\textwidth}
         \centering
-        \includegraphics[width = 1 \linewidth]{Figures/SBF_EU.png}
+        \includegraphics[width = 1 \linewidth]{Figures/SBF_EU.pdf}
         \caption{}
         \label{fig:SBF_EU}
     \end{subfigure}%
@@ -212,29 +212,52 @@ M-out-of-N, Exact & 99.99 & 99.88 & 26.14  \\
 \label{tbl:interactions_NN}
 \end{table}
 
-An overview of the average accuracies of the decision trees and neural networks is given in Table \ref{tbl:interactions_DT} and Table \ref{tbl:interactions_NN} respectively. These show the mean accuracies for each interaction on each of the different test sets: the general test set, and one test specific test set for each of the two functions of the interaction. What is clear from these tables, is that the mean accuracy of both the neural network and the decision tree on the general test set is quite high for each interaction. However, the accuracies on the specific test sets, which indicate how well the functions themselves are learned, are almost always a lot lower. With the parity-exact interaction, for instance, the decision tree algorithm preforms with an accuracy of 98.5\% on the general test set, but only 17.5\% on the parity test set and 78.8\% on the exact test set. This is shows that a system can perform with a high accuracy, even if it has not learned all of the conditions correctly. The accuracies of the neural network and the decision tree system are also quite similar to each other, which shows that the trends in accuracies are not limited to a single machine learning algorithm. The relationships between the number of variables for each function and the accuracies of each of the tests sets are recorded as well, an example of which can be seen in the heatmaps of Figure \ref{fig:Heatmap_ME}. These display the mean accuracies of the decision tree on the three different test sets for the M-out-of-n and exact value function interaction versus the number of variables of both functions on the x- and y-axis.
+An overview of the average accuracies of the decision trees and neural networks is given in Table \ref{tbl:interactions_DT} and Table \ref{tbl:interactions_NN} respectively. These show the mean accuracies for each interaction on each of the different test sets: the general test set, and one test specific test set for each of the two functions of the interaction. What is clear from these tables, is that the mean accuracy of both the neural network and the decision tree on the general test set is quite high for each interaction. However, the accuracies on the specific test sets, which indicate how well the functions themselves are learned, are almost always a lot lower. With the parity-exact interaction, for instance, the decision tree algorithm preforms with an accuracy of 98.5\% on the general test set, but only 17.5\% on the parity test set and 78.8\% on the exact test set. This is shows that a system can perform with a high accuracy, even if it has not learned all of the conditions correctly. The accuracies of the neural network and the decision tree system are also quite similar to each other, which shows that the trends in accuracies are not limited to a single machine learning algorithm. The relationships between the number of variables for each function and the accuracies of each of the tests sets are recorded as well, an example of which can be seen in the heatmaps of Figure \ref{fig:Heatmap_DT_ME} and Figure \ref{fig:Heatmap_NN_ME}. These display the mean accuracies of the decision tree on the three different test sets for the M-out-of-n and exact value function interaction versus the number of variables of both functions on the x- and y-axis.
 
  \begin{figure}
     \centering
     \begin{subfigure}[t]{0.45\textwidth}
-        \includegraphics[width = 1 \linewidth]{Figures/Heatmap_ME_DT_general.png}
+        \includegraphics[width = 1 \linewidth]{Figures/Heatmap_ME_DT_general.pdf}
 		\caption{}       
         \label{fig:Heatmap_ME_DT_general}
     \end{subfigure}%
 
     \begin{subfigure}[t]{0.45\textwidth}
-        \includegraphics[width = 1 \linewidth]{Figures/Heatmap_ME_DT_M.png}
+        \includegraphics[width = 1 \linewidth]{Figures/Heatmap_ME_DT_M.pdf}
 		\caption{}       
         \label{fig:Heatmap_ME_DT_M}
     \end{subfigure}% 
 
    \begin{subfigure}[t]{0.45\textwidth}
-        \includegraphics[width = 1 \linewidth]{Figures/Heatmap_ME_DT_E.png}
+        \includegraphics[width = 1 \linewidth]{Figures/Heatmap_ME_DT_E.pdf}
 		\caption{}       
         \label{fig:Heatmap_ME_DT_E}
     \end{subfigure}% 
     \caption{The mean accuracies of the decision tree system on the different test sets after training on the training set with a M-of-N function (x-axis) and an exact function (y-axis) with varying numbers of variables in each function.}
-    \label{fig:Heatmap_ME}
+    \label{fig:Heatmap_DT_ME}
+\end{figure}
+
+ \begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[width = 1 \linewidth]{Figures/Heatmap_ME_NN_general.pdf}
+		\caption{}       
+        \label{fig:Heatmap_ME_NN_general}
+    \end{subfigure}%
+
+    \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[width = 1 \linewidth]{Figures/Heatmap_ME_NN_M.pdf}
+		\caption{}       
+        \label{fig:Heatmap_ME_NN_M}
+    \end{subfigure}% 
+
+   \begin{subfigure}[t]{0.45\textwidth}
+        \includegraphics[width = 1 \linewidth]{Figures/Heatmap_ME_NN_E.pdf}
+		\caption{}       
+        \label{fig:Heatmap_ME_NN_E}
+    \end{subfigure}% 
+    \caption{The mean accuracies of the decision tree system on the different test sets after training on the training set with a M-of-N function (x-axis) and an exact function (y-axis) with varying numbers of variables in each function.}
+    \label{fig:Heatmap_NN_ME}
 \end{figure}
 
 The accuracies on the general test set (Figure \ref{fig:Heatmap_ME_DT_general}) show the overall performance of the decision tree system on the combined problem. Unsurprisingly, more M-out-of-N and exact value function variables lead to a decrease in accuracy; as the problem becomes more complex, it is more difficult for the system to learn. Figure \ref{fig:Heatmap_ME_DT_M} displays how well the M-out-of-N function is learned by the system, and a similar decrease in accuracy can be observed when more variables are used in the data. Interestingly, the number of M-out-of-N variables has a bigger influence on the accuracy on this test set than the number of exact value variables. This could be because functions with more variables are more difficult for the systems to learn. In Figure \ref{fig:Heatmap_ME_DT_E}, which displays how well the exact value function is learned, a different effect can be observed. The accuracy on this test set decreases with more exact value variables, but increases with more M-out-of-N variables. So a larger number of
